@@ -10,6 +10,7 @@
    <!-- Google fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Outfit:wght@200;400;800&display=swap" rel="stylesheet">
 
    <?php wp_head(); ?>
