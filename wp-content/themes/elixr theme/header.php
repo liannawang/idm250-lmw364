@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(''); ?>Elixr.</title>
+    <title><?php wp_title(''); ?></title>
 
     <link rel="stylesheet" href="/wp-content/themes/idm-250-theme/dist/styles/main.css">
    <!-- Google fonts -->
