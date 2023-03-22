@@ -1,0 +1,473 @@
+/* Theme Name: Example  
+Theme URI: http://example.com/  
+Github Theme URI: https://github.com/liannawang/idm250-lmw364/tree/main/wp-content/themes/elixr%20theme
+Description: My theme for IDM250
+Author: Lianna Wang
+Version: v1.0.0 */
+@font-face {
+    font-family: "Neue";
+    src: url(PPNeueMontreal-Medium.otf);
+  }
+  
+  @font-face {
+    font-family: "Hero";
+    src: url(RecklessNeue-Regular.ttf);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Neue";
+  }
+  
+  /* Header styles */
+  header {
+    position: relative;
+    z-index: 1;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    } */
+  
+  /* Hero image styles */
+  .hero {
+    background-image: url("https://www.100percentpure.com/s/files/1/0648/1955/files/Cover_Photo_-_100__Pure_What_are_Enzymes_in_Skincare_and_How_do_you_Use_Them.jpg?v=1672646392&em-origin=cdn.shopify.com");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+  }
+  .blogpost {
+    background-image: url("https://blogs.bcm.edu/wp-content/uploads/2022/02/skincare-101-800x445.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-family: "Hero";
+    font-size: 36px;
+    color: #fff;
+    /* text-shadow: 2px 2px 0 #333; */
+    margin-bottom: 16px;
+    /* Heading/H1 Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 90%;
+    /* or 86px */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  
+    /* White */
+  
+    color: #fcfdfd;
+  }
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.35); adjust opacity as needed */
+    background: rgba(50, 30, 4, 0.4);}
+  .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Blog post styles */
+  /* Blog post styles */
+  .posts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  
+  .post {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .post h2 {
+    font-size: 24px;
+    margin: 0 0 20px;
+  }
+  
+  .post p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .read-more {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    background-color: #666;
+  }
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .post img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Default styles */
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin-right: 16px;
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  
+  .menu li {
+    margin-left: 24px;
+  }
+  
+  .menu li:first-child {
+    margin-left: 0;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /* font-size: 18px; */
+    
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+  /* identical to box height, or 117% */
+  
+  letter-spacing: 0em;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* Media queries */
+  
+  @media only screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 16px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .menu li {
+      margin: 8px 0;
+    }
+  
+    .toggle {
+      display: block;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background-image: url("https://i.imgur.com/Qxkr0Nh.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+  
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+  
+    .nav-links.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: transform 0.3s ease;
+    }
+  
+    .change .bar:first-child {
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+  
+    .change .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .change .bar:last-child {
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
+  
+    .change .bar {
+      margin: 0;
+    }
+  }
+  
+  /* Style for headings */
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  /* Style for unordered and ordered lists */
+  ul {
+    list-style-type: disc;
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  ol {
+    list-style-type: decimal;
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  
+  /* Style for tables */
+  table {
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Style for buttons */
+  .btn {
+    background-color: #F8F4E7;
+    ;
+    border: none;
+    color: #323334;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style for paragraphs */
+  p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Style for pull quotes */
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    margin: 16px 0;
+    padding-left: 16px;
+  }
+  
+  /* Style for links */
+  a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Style for images with captions */
+  .img-container {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .img-container .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Style for video embed */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
