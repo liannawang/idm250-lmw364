@@ -13,12 +13,12 @@
 function theme_scripts_and_styles()
 {
     // Load CSS Reset
-    // wp_enqueue_style(
-    //     'css-reset',
-    //     'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css',
-    //     [],
-    //     null
-    // );
+    wp_enqueue_style(
+        'css-reset',
+        'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css',
+        [],
+        null
+    );
     // Load in Google Fonts
     wp_enqueue_style(
         'google-fonts',
@@ -90,3 +90,58 @@ function register_theme_menus()
     );
 }
 add_action('init', 'register_theme_menus');
+
+function custom_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Custom Sidebar', 'textdomain' ),
+        'id' => 'custom-sidebar',
+        'description' => __( 'Add widgets here to appear in your custom sidebar.', 'textdomain' ),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'custom_sidebar' );
+
+
+// Register custom widget
+function custom_heading_widget_init() {
+    register_widget( 'custom_heading_widget' );
+}
+add_action( 'widgets_init', 'custom_heading_widget_init' );
+
+// Create custom widget
+class custom_heading_widget extends WP_Widget {
+
+    // Widget setup
+    function __construct() {
+        parent::__construct(
+            'custom_heading_widget',
+            __('Custom Heading Widget', 'textdomain'),
+            array( 'description' => __('Displays a list of headings in your posts or pages', 'textdomain') )
+        );
+    }
+
+    // Output the widget
+    function widget( $args, $instance ) {
+        global $post;
+
+        // Get all headings in the post content
+        preg_match_all('/<h2>(.*?)<\/h2>/', $post->post_content, $matches);
+
+        // If there are no headings, don't display the widget
+        if (empty($matches[1])) {
+            return;
+        }
+
+        // Output the widget
+        echo $args['before_widget'];
+        echo '<ul>';
+        foreach ($matches[1] as $match) {
+            echo '<li><a href="#' . sanitize_title($match) . '">' . $match . '</a></li>';
+        }
+        echo '</ul>';
+        echo $args['after_widget'];
+    }
+}

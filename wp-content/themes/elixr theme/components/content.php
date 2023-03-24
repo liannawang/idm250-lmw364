@@ -1,3 +1,4 @@
+<div class="main">
 <?php
 if (have_posts()) {
     // Load posts loop.
@@ -11,3 +12,4 @@ if (have_posts()) {
 }
 
 ?>
+</div>

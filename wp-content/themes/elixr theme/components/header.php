@@ -2,12 +2,8 @@
       <header>
       <nav>
         <div class="container">
-          <a class="logo" href="liannawang.com/idm250">Elixr.</a>
+          <a class="logo" href="<?php echo site_url(); ?>">elixr.</a>
           <ul class="menu nav-links none">
-          <!-- <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li> -->
-            <!-- <li><a href="#">Contact</a></li> -->
           <?php
         wp_nav_menu (['theme_location' => 'primary-menu']);
         // $menu = wp_get_nav_menu_items('primary-menu');
@@ -29,9 +25,6 @@
       class="hero-img--home">
         <div class="hero-text">
         <h1><?php echo get_the_title(); ?></h1>
-
-
-     
-       
+        <p><?php echo get_the_excerpt(); ?></p>
       </div>
     </section>
